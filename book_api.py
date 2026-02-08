@@ -26,14 +26,14 @@ class Book(db.Model):
     author = db.Column(db.String(100), nullable=False)
     publisher = db.Column(db.String(100), nullable=False) # type: ignore
 
-# Helper method to convert the database object into a dictionary.Essential for returning JSON data.
-def to_dict(self):
-    return {
-        "id": self.id,
-        "book_name": self.book_name,
-        "author": self.author,
-        "publisher": self.publisher
-    }
+    # Helper method to convert the database object into a dictionary.Essential for returning JSON data.
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "book_name": self.book_name,
+            "author": self.author,
+            "publisher": self.publisher
+        }
 
 # 4. DATABASE CREATION: with app.app_context() ensures the app is active when we trigger database creation.
 # Create DB
@@ -63,10 +63,10 @@ def get_book():
     return jsonify([book.to_dict() for book in books])
 
 # 7. READ ONE: FETCH BY ID
-    @app.route('/books/<int:id>' , methods=['GET'])
-    def get_book(id):
-        books = Book.query.get_or_404(id)
-        return jsonify(book.to_dict())
+@app.route('/books/<int:id>' , methods=['GET'])
+def get_one_book(id):
+    book = Book.query.get_or_404(id)
+    return jsonify(book.to_dict())
     
 
 # 8. UPDATE: MODIFY AN EXISTING BOOK
