@@ -172,7 +172,7 @@ class RecipeManager:
                 "ingredients": ["4 tbsp flour", "2 tbsp sugar", "2 tbsp cocoa", "3 tbsp milk", "1 tbsp oil"],
                 "steps": ["Mix dry ingredients", "Add wet ingredients", "Microwave for 90 seconds"],
                 "cooking_stages": [
-                    {"time": 90, "power": 70, "action": "Bake cake"}
+                    {"time": 90, "power": 100, "action": "Bake cake"}
                 ],
                 "rating": 4.8
             },
