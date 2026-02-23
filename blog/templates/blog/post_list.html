@@ -1,23 +1,18 @@
 {% extends 'blog/base.html' %}
-{% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        
 
-        {% block content %}
-            <section class="intro">
-                <h1>Welcome to My Django Website</h1>
-                <p>This is my first real Django template page.</p>
-            </section>
+{% block content %}
+    <section class="intro">
+        <h1>Welcome to My Django Website</h1>
+        <p>This is my first real Django template page.</p>
+    </section>
 
-            {% for post in posts %}
-                <article class="post">
-                    <time class="date">Published: {{ post.published_date }}</time>
-                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </article>
-            {% empty %}
-                <p>No posts published yet.</p>
-            {% endfor %}
-        {% endblock %}
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">Published: {{ post.published_date }}</time>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% empty %}
+        <p>No posts published yet.</p>
+    {% endfor %}
+{% endblock %}

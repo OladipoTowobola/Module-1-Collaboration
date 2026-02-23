@@ -1,0 +1,82 @@
+{
+  "recipes": [
+    {
+      "name": "Microwave Omelette",
+      "category": "Breakfast",
+      "ingredients": [
+        "2 eggs",
+        "2 tbsp milk",
+        "salt",
+        "pepper",
+        "cheese"
+      ],
+      "steps": [
+        "Whisk eggs and milk",
+        "Microwave for 2 minutes",
+        "Add cheese",
+        "Microwave 30 seconds"
+      ],
+      "cooking_stages": [
+        {
+          "time": 120,
+          "power": 80,
+          "action": "Cook eggs"
+        },
+        {
+          "time": 30,
+          "power": 50,
+          "action": "Melt cheese"
+        }
+      ],
+      "rating": 4.5
+    },
+    {
+      "name": "Mug Cake",
+      "category": "Dessert",
+      "ingredients": [
+        "4 tbsp flour",
+        "2 tbsp sugar",
+        "2 tbsp cocoa",
+        "3 tbsp milk",
+        "1 tbsp oil"
+      ],
+      "steps": [
+        "Mix dry ingredients",
+        "Add wet ingredients",
+        "Microwave for 90 seconds"
+      ],
+      "cooking_stages": [
+        {
+          "time": 90,
+          "power": 70,
+          "action": "Bake cake"
+        }
+      ],
+      "rating": 4.8
+    },
+    {
+      "name": "Steamed Vegetables",
+      "category": "Lunch",
+      "ingredients": [
+        "2 cups mixed vegetables",
+        "2 tbsp water",
+        "1 tsp butter",
+        "salt"
+      ],
+      "steps": [
+        "Place vegetables in bowl",
+        "Add water",
+        "Cover and microwave for 5 minutes"
+      ],
+      "cooking_stages": [
+        {
+          "time": 300,
+          "power": 100,
+          "action": "Steam vegetables"
+        }
+      ],
+      "rating": 4.2
+    }
+  ],
+  "favorites": []
+}
