@@ -10,13 +10,10 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
         <style>
-            body {
-                background-color: #f4f4f4;
-                margin-top: 40px;
-            }
+            /* Keeping your custom styling here so it applies to all pages */
+            body { background-color: #f4f4f4; }
             .page-header {
                 background-color: #212529;
-                margin-top: -40px;
                 padding: 20px 0;
                 margin-bottom: 40px;
             }
@@ -41,13 +38,9 @@
                 border-radius: 8px;
                 box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
             }
-            .date {
-                color: #828282;
-            }
         </style>
     </head>
     <body>
-        
         <header class="page-header">
             <div class="container">
                 <h1><a href="/">Django Girls Blog</a></h1>
@@ -55,45 +48,12 @@
         </header>
 
         <main class="container">
-            <section class="box">
-                <h1>Welcome to My Django Website 🚀</h1>
-                <p>This is my first real Django template page.</p>
-                <p><strong>Built with Views + URLs + Templates!</strong></p>
-            </section>
-
             <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    
-                    {% for post in posts %}
-                        <article class="post">
-                            <time class="date">
-                                Published: {{ post.published_date }}
-                            </time>
-                            <h2><a href="">{{ post.title }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </article>
-                    {% empty %}
-                        <p class="text-center">No posts yet!</p>
-                    {% endfor %}
-
-                    <hr>
-                    <h3>Static Example Posts</h3>
-
-                    <article class="post">
-                        <time class="date">Published: 16.02.2026, 12:14</time>
-                        <h2><a href="">My first post</a></h2>
-                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.</p>
-                    </article>
-
-                    <article class="post">
-                        <time class="date">Published: 16.06.2026, 12:14</time>
-                        <h2><a href="">My second post</a></h2>
-                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.</p>
-                    </article>
-
+                <div class="col">
+                    {% block content %}
+                    {% endblock %}
                 </div>
             </div>
         </main>
-
     </body>
 </html>
