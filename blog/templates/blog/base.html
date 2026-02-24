@@ -13,7 +13,7 @@
             /* Keeping your custom styling here so it applies to all pages */
             body { background-color: #f4f4f4; }
             .page-header {
-                background-color: #212529;
+                background-color: #dc834c;
                 padding: 20px 0;
                 margin-bottom: 40px;
             }
@@ -21,6 +21,17 @@
                 color: #ffffff;
                 font-family: 'Lobster', cursive;
                 text-decoration: none;
+            }
+            .top-menu {
+                color: #ffffff;
+                float: right;
+                font-size: 26pt;
+                margin-right: 20px;
+            }
+            .top-menu svg {
+                width: 26px;
+                height: 26px;
+                fill: #ffffff;
             }
             .box {
                 background: white;
@@ -43,6 +54,12 @@
     <body>
         <header class="page-header">
             <div class="container">
+                <a href="{% url 'post_new' %}" class="top-menu">
+                    {% include 'blog/icons/file-earmark-plus.svg' %}
+                </a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu">
+                    {% include 'blog/icons/pencil-fill.svg' %}
+                </a>
                 <h1><a href="/">Django Girls Blog</a></h1>
             </div>
         </header>

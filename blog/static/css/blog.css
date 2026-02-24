@@ -1,3 +1,38 @@
 h1 a, h2 a {
     color: #C25100;
 }
+
+.post .actions {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.post .actions a {
+    margin-left: 5px;
+}
+
+.post .actions button {
+    margin-left: 5px;
+}
+
+.post .actions svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.post .date {
+    color: #828282;
+    margin-bottom: 10px;
+}
+
+.post h2 {
+    margin-top: 0;
+    clear: both;
+}
+
+.post::after {
+    content: "";
+    display: table;
+    clear: both;
+}
